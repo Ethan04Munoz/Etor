@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.queryloader2/3.2.2/jquery.queryloader2.min.js"></script>
-  
-
     <title>Feliz cumpleaños Etor</title>
 </head>
 <body>
@@ -20,7 +15,7 @@
 
     <script>
         confetti({
-        particleCount: 600,
+        particleCount: 700,
         startVelocity: 30,
         spread: 360,
         origin: {
@@ -33,7 +28,7 @@
         {
             confetti(
             {
-                particleCount: 600,
+                particleCount: 850,
                 startVelocity: 30,
                 spread: 360,
                 origin: 
@@ -44,19 +39,21 @@
                 }
             });
         },300);
-
-
-        $("body").queryLoader2({
-            percentage: true,
-            barHeight: 1,
-            completeAnimation: "grow",
-            minimumTime: 100,
-            onLoadComplete: hidePreLoader
-        });
-
-        function hidePreLoader() {
-            $("#precarga").hide();
-        }
+        setTimeout(function()
+        {
+            confetti(
+            {
+                particleCount: 300,
+                startVelocity: 30,
+                spread: 360,
+                origin: 
+                {
+                    x: Math.random(),
+                    // since they fall down, start a bit higher than random
+                    y: Math.random() - 0.2
+                }
+            });
+        },550);
     </script>
     <style>
         *{
@@ -79,18 +76,6 @@
             background-repeat: no-repeat; /* Do not repeat the image */
             background-size: 80%; /* Resize the background image to cover the entire container */
         }
-
-        /* Preload */
-        #precarga {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #0000;
-            z-index: 9999;
-        }
-
     </style>
 </body>
 </html>
