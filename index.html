@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>¡¡Feliz cumpleaños Etor!!</h1>
+    <p>De parte de tu amigo Ethan.</p>
+    <script>
+        confetti({
+        particleCount: 600,
+        startVelocity: 30,
+        spread: 360,
+        origin: {
+            x: Math.random(),
+            // since they fall down, start a bit higher than random
+            y: Math.random() - 0.2
+        }
+        });
+        setTimeout(function()
+        {
+            confetti(
+            {
+                particleCount: 600,
+                startVelocity: 30,
+                spread: 360,
+                origin: 
+                {
+                    x: Math.random(),
+                    // since they fall down, start a bit higher than random
+                    y: Math.random() - 0.2
+                }
+            });
+        },300);
+    </script>
+    <style>
+        h1,
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p{
+            font-weight: bold;
+            text-shadow: rgba(255, 255, 255, 0.671)  2px 2px;
+            font-size: 180%;
+            text-align: center;
+        }
+        h1{
+            font-size: 370%;
+            text-align: center;
+        }
+        body{
+            background-image: url("jijija.png");
+            background-color: #ffff;
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: 80%; /* Resize the background image to cover the entire container */
+        }
+    </style>
+</body>
+</html>
